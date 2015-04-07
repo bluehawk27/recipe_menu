@@ -16,8 +16,16 @@ gem 'coffee-rails', '~> 4.1.0'
 #html alternative
 gem 'haml', '~> 4.0.6'
 
+#User log in/logout
+gem 'devise', '~> 3.4.1'
+
+
+
 # simpeler Forms
 gem 'simple_form', '~> 3.1.0'
+
+#nested forms with cocooon
+gem 'cocoon', '~> 1.2.6'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
