@@ -21,6 +21,7 @@ gem 'haml-rails', '~> 0.9.0'
 
 #User log in/logout
 gem 'devise', '~> 3.4.1'
+gem 'aws-sdk', '~> 1.5.7'
 
 group :production do
   gem 'pg',             '0.18.1'
