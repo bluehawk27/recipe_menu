@@ -1,8 +1,9 @@
 class RecipesController < ApplicationController
-before_action :authenticate_user!, except: [:index, :show]
-  before_action :find_recipe, only: [:show, :update, :edit, :destroy]
+  before_action :find_recipe, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
-    @recipe = Recipe.all.order("created_at DESC" )
+    @recipe = Recipe.all.order("created_at DESC")
   end
 
   def show
