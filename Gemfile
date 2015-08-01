@@ -24,6 +24,7 @@ gem 'haml-rails', '~> 0.9.0'
 gem 'devise', '~> 3.4.1'
 gem 'aws-sdk', '~> 1.5.7'
 
+
 group :production do
   gem 'pg',             '0.18.1'
   gem 'rails_12factor', '0.0.2'
@@ -40,7 +41,7 @@ gem 'cocoon', '~> 1.2.6'
 # gem 'therubyracer', platforms: :ruby
 
 #image upload Gem
-gem 'paperclip', '~> 4.2.1'
+gem 'paperclip', '~> 4.3'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

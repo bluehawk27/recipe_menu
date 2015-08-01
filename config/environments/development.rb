@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   #Paperclip path
-  Paperclip.options[:command_path] = "/usr/local/bin/"
+  Paperclip.options[:command_path] = "/usr/local/bin"
 
   #default url path Devise
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
