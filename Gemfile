@@ -15,6 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'dogstatsd-ruby', '~> 1.4.1'
+gem 'dotenv-rails', :groups => [:development, :test],  :require => 'dotenv/rails-now'
 
 #html alternative
 # gem 'haml', '~> 4.0.6'
@@ -23,6 +24,8 @@ gem 'haml-rails', '~> 0.9.0'
 #User log in/logout
 gem 'devise', '~> 3.4.1'
 gem 'aws-sdk', '~> 1.5.7'
+gem 'twilio-ruby', '~> 4.2.1'
+
 
 group :production do
   gem 'pg',             '0.18.1'

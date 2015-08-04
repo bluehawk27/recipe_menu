@@ -14,6 +14,8 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  config.middleware.use Rack::TwilioWebhookAuthentication, Rails.application.secrets.twilio_auth_token, '/voice'
+
   #set this to host domain in production for password mailers
   # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
