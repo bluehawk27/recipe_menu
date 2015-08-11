@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  root          'recipes#index'
   devise_for    :users
   resources     :recipes
-  post 'twilio/voice' => 'twilio#voice'
-  post 'twiliosms/send_sms' => 'twiliosms#send_sms'
-  root          'recipes#index'
+  post          'twilio/voice' => 'twilio#voice'
+  post          'twiliosms/send_sms' => 'twiliosms#send_sms'
+  match         'twiliosms/process_sms' => 'twiliosms#process_sms', via: :all
+
+  # match         'twiliosms/process_sms' => 'twiliosms#process_sms'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

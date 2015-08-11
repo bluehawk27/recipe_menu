@@ -15,7 +15,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'dogstatsd-ruby', '~> 1.4.1'
-gem 'dotenv-rails', :groups => [:development, :test],  :require => 'dotenv/rails-now'
+gem 'dotenv-rails', :groups => [:development, :test]
 
 #html alternative
 # gem 'haml', '~> 4.0.6'

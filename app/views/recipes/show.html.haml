@@ -20,6 +20,7 @@
             = render 'ingredient_fields', f: ingredient
           = f.input :phone, :placeholder => '+16505551234', input_html: {class:"form-input form-control"}
           %br
+          %h4 Send Me The Ingredients
           = f.button :submit, "Send", class: "btn btn-primary"
           / %ul
           /   - @recipe.ingredients.each do |ingredient|
@@ -27,7 +28,6 @@
         / = form_tag('/twiliosms/send_sms', method: 'POST') do
         / %input{:name => "phone", :placeholder => '+16505551234', :type => "text"}
         / %button{:type => "submit"} Send
-        / %h2 Send Me The Ingredients
 
     .col-md-6
       #directions
