@@ -14,7 +14,7 @@ class TwiliosmsController < ApplicationController
     @client = Twilio::REST::Client.new(ENV["TWILIO_ACCOUNT_SID"], ENV["TWILIO_AUTH_TOKEN"])
 
     @message = @client.account.messages.create({:to => "#{phone}",
-                                                :from => "+16502521651",
+                                                :from => ENV["TWILIO_NUMBER"],
                                                 :body => "Here are the ingredients for your Recipe: #{message}"})
     redirect_to root_path
   end
