@@ -1,0 +1,7 @@
+<Response>
+  <message>To make <%= @recipe.title %> we recommend the following ingredients:
+    <% @recipe.ingredients.each do |ingredient| %>
+      <%= ingredient.name %>
+    <% end %>
+  </message>
+</Response>

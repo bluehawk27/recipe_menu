@@ -13,9 +13,21 @@
     .col-md-6
       #ingredients
         %h2 Ingredients
-        %ul
-          - @recipe.ingredients.each do |ingredient|
-            %li= ingredient.name
+        %p.description
+          Use current ingredients or substitute your own!
+        = simple_form_for @recipe, url: twiliosms_send_sms_path, method: :post, html: { multipart: true} do |f|
+          = f.simple_fields_for :ingredients do |ingredient|
+            = render 'ingredient_fields', f: ingredient
+          = f.input :phone, :placeholder => '+16505551234', input_html: {class:"form-input form-control"}
+          %br
+          %h4 Send Me The Ingredients
+          = f.button :submit, "Send", class: "btn btn-primary"
+          / %ul
+          /   - @recipe.ingredients.each do |ingredient|
+          /     %li= ingredient.name
+        / = form_tag('/twiliosms/send_sms', method: 'POST') do
+        / %input{:name => "phone", :placeholder => '+16505551234', :type => "text"}
+        / %button{:type => "submit"} Send
 
 
     .col-md-6
@@ -31,5 +43,3 @@
       - if user_signed_in?
         =link_to "Edit", edit_recipe_path, class: "btn btn-default"
         =link_to "Delete", recipe_path, method: :delete, data: {confrim: "are you sure"}, class: "btn btn-default"
-
-
