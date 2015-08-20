@@ -20,7 +20,11 @@ class TwiliosmsController < ApplicationController
   end
 
   def process_sms
-    @recipe = Recipe.find_by(title: params[:Body])
-    render 'process_sms.xml.erb', :content_type => 'text/xml'
+    if
+      @recipe = Recipe.find_by(title: params[:Body])
+      render 'process_sms.xml.erb', :content_type => 'text/xml'
+    else
+      render 'no_recipe.xml.erb', :content_type => 'text/xml'
+    end
   end
 end
