@@ -46,6 +46,15 @@ body {
 	margin-bottom: 50px;
 	@include box-shadow;
 	border: none;
+	#sms {
+		display: inline-block;
+		width: 50%;
+		text-align: center;
+		padding: 1em 0 0;
+		color: $blue;
+		border-bottom: 1px solid $blue;
+		margin-left: 4em;
+	}
 	.navbar-brand {
 		text-transform: uppercase;
 		letter-spacing: -1px;

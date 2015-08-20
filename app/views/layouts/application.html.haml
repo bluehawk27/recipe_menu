@@ -9,6 +9,7 @@
     %nav.navbar.navbar-default
       .container
         .navbar-brand= link_to "Recipe Menu", root_path
+        %p#sms To get the ingredients, text the recipe title as it appears, to: +16502521651
 
         - if user_signed_in?
           %ul.nav.navbar-nav.navbar-right
