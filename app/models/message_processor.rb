@@ -10,6 +10,7 @@ class MessageProcessor
     @message = get_message ingredients
     @phone = get_phone_number params
   end
+
   def create_message
     get_client.account.messages.create({:to => "#{phone}",
                                                 :from => ENV["TWILIO_NUMBER"],
