@@ -24,9 +24,12 @@ gem 'twilio-ruby', '~> 4.2.1'
 
 
 
+
+
 group :production do
   gem 'pg',             '0.18.1'
   gem 'rails_12factor', '0.0.2'
+  gem 'heroku-deflater'
 end
 
 
