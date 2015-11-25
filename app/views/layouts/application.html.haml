@@ -7,7 +7,7 @@
     %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
     = csrf_meta_tags
   %body
-    %nav.navbar.navbar-default
+    %nav.navbar.navbar-default{"data-turbolinks-permanent" => ""}
       .container
         .navbar-brand= link_to "Recipe Menu", root_path
         %p#sms To get the ingredients, text the recipe title as it appears, to: +16502521651
