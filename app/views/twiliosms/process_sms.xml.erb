@@ -1,5 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Response>
-  <message>To make <%= @recipe.title %> we recommend the following ingredients:
+  <message>
+  To make <%= @recipe.title %> we recommend the following ingredients:
     <% @recipe.ingredients.each do |ingredient| %>
       <%= ingredient.name %>
     <% end %>
