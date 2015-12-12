@@ -19,7 +19,7 @@ gem 'haml-rails', '~> 0.9.0'
 gem 'devise', '~> 3.4.1'
 
 gem 'aws-sdk', '~> 1.5.7'
-
+gem 'sandi_meter', '~> 1.2'
 gem 'twilio-ruby', '~> 4.2.1'
 
 
