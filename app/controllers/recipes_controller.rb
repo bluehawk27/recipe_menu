@@ -18,7 +18,7 @@ class RecipesController < ApplicationController
     if @recipe.save
       redirect_to @recipe, notice: "Successfully created new recipe"
     else
-      render 'new'
+      render :new
     end
   end
 
@@ -29,7 +29,7 @@ class RecipesController < ApplicationController
     if @recipe.update(recipe_params)
       redirect_to @recipe
     else
-      render 'edit'
+      render :edit
     end
   end
 
